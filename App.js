@@ -1,14 +1,30 @@
 import React from 'react';
-import {Image, ScrollView, Text, Dimensions, StyleSheet} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  Text,
+  Dimensions,
+  StyleSheet,
+  FlatList,
+} from 'react-native';
 
 const largura = Dimensions.get('screen').width;
+const informacoes = [{usuario: 'Ricardo'}, {usuario: 'Marina'}];
 const App = () => {
   return (
     <ScrollView>
-      <Text>Felipe Marinho</Text>
-      <Image source={require('./res/img/alura.jpg')} style={estilo.imagem} />
-      <Text>Felipe Marinho</Text>
-      <Image source={require('./res/img/alura.jpg')} style={estilo.imagem} />
+      <FlatList
+        data={informacoes}
+        renderItem={({item}) => (
+          <>
+            <Text>{item.usuario}</Text>
+            <Image
+              source={require('./res/img/alura.jpg')}
+              style={estilo.imagem}
+            />
+          </>
+        )}
+      />
     </ScrollView>
   );
 };
