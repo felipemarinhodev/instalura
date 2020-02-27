@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, FlatList} from 'react-native';
-import Cabecalho from './src/Components/Cabecalho';
-import Foto from './src/Components/Foto';
+import {Cabecalho} from './src/Components/Cabecalho';
+import {Foto} from './src/Components/Foto';
 
 const informacoes = [{id: 1, usuario: 'Ricardo'}, {id: 2, usuario: 'Marina'}];
 const App = () => {
